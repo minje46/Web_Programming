@@ -1,0 +1,116 @@
+<Html>
+<Head>
+<style>
+a:link { color: #FFFF48; }
+a:visited { color: #FFD8D8; }
+a:hover { color: #A566FF; }
+</style>
+<script>
+function save()
+{
+confirm("Are you sure??");
+}
+function storeCookies()
+{
+var expires = "; expires = Monday, 01-Dec-02 23:59:59 GMT";
+var first = document.widgetForm.firstField.value;
+var last = document.widgetForm.lastField.value;
+var account = document.widgetForm.accountField.value;
+document.cookie = "first = " + first + expires;
+document.cookie = "last = " + last + expires;
+document.cookie = "account = " + account + expires;
+}
+function registerAccount()
+{
+storeCookies();
+alert("Registration Successful.");
+}
+function cookieVal(cookieName, cookieString)
+{
+var startLoc = cookieString.indexOf(cookieName);
+if(startLoc == -1)
+{
+return(" ");
+}
+var sepLoc = cookieString.indexOf(" = ", startLoc);
+var endLoc = cookieString.indexOf(" ; ", startLoc);
+if(endLoc == -1)
+{
+endLoc = cookieString.length;
+}
+return(cookieString.substring(sepLoc+1, endLoc));
+}
+function presetValues()
+{
+var firstField = document.widgetForm.firstField;
+var lastField = document.widgetForm.lastField;
+var accountField = document.widgetForm.accountField;
+var cookies = document.cookie;
+firstField.value = cookieVal("first", cookies);
+lastField.value = cookieVal("last", cookies);
+accountField.value = cookieVal("account", cookies);
+}
+</script>
+</Head>
+<Body background = "r1.jpg" text = "#00D8FF" onLoad = "presetValues()">
+<pre><br>
+<h1 ALIGN = "CENTER" > RESEARCH </h1>
+<br><hr>
+<h3 ALIGN = "LEFT" > Fill in the blank and Check the question box </h3>
+<br>
+<h1> CooKie!!!</h1>
+<form action = "servlet / cwp.Widgets" name = "widgetForm">
+Last Name : <input type = "txt" name = "lastField">
+<br>
+First Name : <input type = "text" name = "firstField">
+<br>
+Account Number : <input type = "text" name = "accountField">
+<br>
+Widget Name : <input type = "text" name = "widgetField">
+<br>
+<input type = "button" value = "Register Account" onClick = "registerAccount()">
+<input type = "submit" value = "Submit Order">
+</form>
+<form>
+<Left>
+<p>
+ Are you interested in baseball ? 
+ <select name = "Choosing">
+ <option value = "Yes"> Yes
+ <option value = "No">  No
+ </select>
+<br>
+ Which team are you fan in ?
+ <Dl>
+	<Dt>Team : 
+		<Dd> <input type = "radio" name = "Hanwha Eagles"> Hanwha 
+		<Dd> <input type = "radio" name = "LG Twins"> LG
+		<Dd> <input type = "radio" name = "Doosan Bears"> Doosan
+		<Dd> <input type = "radio" name = "Kia Tigers"> Kia
+		<Dd> <input type = "radio" name = "Lotte Giants"> Lotte
+		<Dd> <input type = "radio" name = "Sk Wyverns"> Sk
+		<Dd> <input type = "radio" name = "Nexen Heroes"> Nexen
+		<Dd> <input type = "radio" name = "Nc Dinos"> Nc
+		<Dd> <input type = "radio" name = "Samsung Lions"> Samsung
+</Dl>
+Which position are you like?
+<select size = "5">	
+	<option value = "pitcher"> pitcher
+	<option value = "batter"> batter
+	<option value = "infielder"> infielder
+	<option value = "outfielder"> outfielder
+	<option value = "shortstop"> shortstop
+</select><br><br>
+<input type = "checkbox" name = "information agree" checked> Check here if you agree save the information
+<br><br>
+<input type = "button" value = "Save" onclick = "save()">
+</p>
+</Left>
+</form>
+
+<center>
+<h1><a href = "Research.html"> top </a></h1>
+</center>
+</pre>
+</body>
+</html>

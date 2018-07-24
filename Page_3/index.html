@@ -1,0 +1,141 @@
+﻿<html>
+<head>
+	<Title>Kwak's...</Title>
+<style>
+#menu
+{
+margin-top:0.1cm;
+margin-right:0.19cm;
+margin-left:0.11cm;
+margin-bottom:0.1cm;
+}
+
+#top
+{
+margin-top:0.18cm;
+margin-right:0.19cm;
+margin-left:0.11cm;
+color:black;
+}
+#top em{color:#CC723D}
+.font{color:red}
+#content
+{
+position:absolute;
+margin-left:27%;
+margin-top:0%;
+color:black;
+font-weight:bold;
+}
+a:link { color: #FFE400; }
+a:visited { color: #FFFFFF; }
+a:hover { color: red; }
+</style>
+<script>
+function over(obj)
+{
+obj.innerHTML = "K   ●   I   ●   A";
+obj.style.color="silver";
+obj.style.fontFamily="serif";
+}
+function out(obj)
+{
+obj.innerHTML = "The First Web Page";
+obj.style.marginTop = "0.18cm";
+obj.style.marginRight = "0.19cm";
+obj.style.marginLeft = "0.11cm";
+obj.style.textAlign="center";
+obj.style.fontSize = "33"; 
+obj.style.color = "#CC723D";
+obj.style.fontFamily="arial";
+}
+function ale(obj)
+{
+var x;
+x = "Don't" + " " + "Click" + "!!!";
+alert(x);
+}
+function startTime()
+{
+var today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+m = checkTime(m);
+s = checkTime(s);                     
+var date = (new Date()).toString().substr(0,10);                       
+document.getElementById('txt').innerHTML = date + " ";
+document.getElementById('txt').innerHTML += h + ":" + m + ":" + s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+function close_page()
+{
+window.opener = "nothing";
+window.open('', '_parent', '');
+window.close();
+}
+</script>
+</head>
+<body background = "top.jpg" text = "sliver" onload="startTime()">
+<pre><embed src="sound.mp3" hidden></embed>
+<div id = "top">
+<h1 ALIGN = "CENTER"> <em>The First Web Page </em></h2>
+</div>
+<script>
+var change = document.getElementById("top");
+change.onmouseover = function() { over(this); };
+change.onmouseout = function() { out(this); };
+</script>
+<div id="content">
+<div id = "menu">
+<table border = "1" cellspacing = "0" cellpadding = "11" ALIGN = "CENTER" >
+<tr> 
+	<td width="100"><a href = Home.html target = "_self">Home</a></td>
+	<td width="100"><a href = Research.html target = "_blank">Research</a></td>
+	<td width="100"><a href = History.html>History</a></td>
+	<td width="100"><a href = StarPlayer.html>Star Player</a></td>
+	<td width="100"><a href = Record.html>Record</a></td>
+	<td width="100"><a href = Problem.html>Problem</a></td>	
+</tr>
+</table>
+</div>
+<h3 ALIGN = "LEFT">This Web is posting the baseball team <span class = "font">"KIA TIGERS"</span></h3>
+<script>
+document.write("The time is");
+var x;
+x = prompt("How do you contact this web page ??");
+var y = "드르와";
+y = confirm(y);
+if (y == 0)
+close_page(this);
+</script>
+<div id="txt">
+</div>
+<form method = "post" action = "index.html">
+<table align = "right">
+<tr>
+	<td>ID</td>
+	<td><input type = "text" ></td>
+	<td><input type = "submit" value = "Login"></td>
+</tr>
+<tr>
+	<td>Password</td>
+	<td><input type = "password" ></td>
+	<td><input type = "submit" value = "Create"></td>
+	</tr>
+</table>
+<br><br><br>
+<img src = "kia.jpg" width = 600 heigh = 70 onclick = "ale(this)">
+<br><br>
+</div>
+</pre>
+</body>
+</html>

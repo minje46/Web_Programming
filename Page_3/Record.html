@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+<style>
+@import url(style_pseudo.css);
+#top
+{
+margin-top:0.9cm;
+margin-right:0.19cm;
+margin-left:0.11cm;
+margin-bottom:0.3cm;
+}
+
+#content
+{
+position:absolute;
+margin-left:27%;
+margin-top:0%;
+}
+
+.main
+{
+padding-top:70px;
+padding-right:30px;
+padding-left:30px;
+padding-bottom:37px;
+}
+</style>
+<script>
+function ale(obj)
+{
+var x;
+x = "This" + " " + "is" +  " " + "the" + " " + "Legend" + " " + "Record";
+alert(x);
+}
+function chan(obj)
+{
+obj.innerHTML = "L . e . g . e . n . d . R . e . c . o . r . d"; 
+obj.style.background = "gold";
+obj.style.color = "black";
+obj.style.fontFamily = "courier";
+obj.style.fontSize = "33";
+obj.style.fontWeight = "bold";
+}
+function re(obj)
+{
+obj.innerHTML = "Legend Record";
+obj.style.background = "black";
+obj.style.textDecoration = "underline";
+obj.style.color = "gold";
+obj.style.textAlign = "center";
+obj.style.fontSize = "33";
+obj.style.fontWeight = "bold";
+}
+</script>
+</head>
+<body bgcolor = "black" text = "gold">
+<div id = "top">
+<h1 align = "center">Legend Record<h1>
+<hr>
+</div>
+<script>
+var change = document.getElementById("top");
+change.onmouseover = function() { chan(this); };
+change.onmouseout = function() { re(this); };
+</script>
+<div id="content">
+<div class = "main">
+<pre>
+<table border = "2" cellspacing = "3" cellpadding = "2" onclick = "ale(this)">
+<caption> No Hit Record </caption>
+	<tr>
+		<th width = "100">Name</th>
+		<th width = "100">Record</th>
+	</tr>
+	<tr>
+		<td>방수원</td>
+		<td>  한국 프로야구 최초 6삼진  ,  3사사구</td>
+	</tr>
+	<tr>
+		<td>선동열</td>
+		<td>  5삼진   ,  무사사구  ,   2실책</td>
+	</tr>
+	<tr>
+		<td>선동열</td>
+		<td>  9삼진    ,     3사사구</td>
+	<tr>
+		<td>이대진  ,  임창용  ,  강태원  ,  김상진</td>
+		<td>  9삼진  ,  3사사구  ,  한국시리즈 4차전</td>
+	</tr>
+	<tr>
+		<td>곽채진</td>
+		<td>  6삼진, 3사사구</td>
+	</tr>
+</table>
+<center>
+<table border = "2" cellspacing = "3" cellpadding = "2" onclick = "ale(this)">
+<caption> In one game, 20 Scoring </caption>
+	<tr>
+		<th colspan = "3">Vs</th>
+		<th>Record</th>
+	</tr>
+	<tr>
+		<td>   기아   </td>
+		<td>   VS   </td>
+		<td>   삼성   </td>
+		<td>     20    -    7    (  24  안타  )</td>
+	</tr>
+		<tr>
+		<td>   해테   </td>
+		<td>   VS   </td>
+		<td>   쌍방울  </td>
+		<td>     22    -    6    (  24  안타  )</td>
+	</tr>
+</table>
+</center>
+<h3 ALIGN = "center"><a href = home.html>HOME</h3>
+</pre>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>레이어 레이아웃</title>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr">
+
+    <style type="text/css">
+        #wrap {
+            width: 1100px;
+            height: 900px;
+            background: #dddddd;
+        }
+
+            #wrap #top {
+                float: left;
+                width: 1086px;
+                height: 160px;
+                border-color: #BDBDBD;
+                border: double 7px;
+            }
+
+            #wrap #left {
+                display: inline;
+                float: left;
+                width: 220px;
+                height: 630px;
+                border-color: #BDBDBD;
+                border: solid ;
+                border-top: 2px;
+                border-right:0px;
+                border-bottom:2px;
+                border-left:2px;
+                background: brown;
+            }
+
+            #wrap #content {
+                float: left;
+                width: 874px;
+                height: 630px;
+                border-color: #BDBDBD;
+                border: solid 2px;
+                border-top-width: 0px;
+                border-left-width: 0px;
+                background: white;
+          
+            }
+
+            #wrap #footer {
+                width: 1096px;
+                height: 100px;
+                border-color: #BDBDBD;
+                border: solid 2px;
+                border-top-width: 0px;
+                background: white;
+            }
+        #top img#a {
+            height: 160px;
+            width: 1086px;
+            border: 0;
+        }
+
+        #left #but {
+           
+            margin-top: 20px;
+            width: 220px;
+            height: 50px;
+            background-color:orange;     
+            border: 0;
+            
+
+        }
+            #left #but a:hover {
+                margin-top: 20px;
+                width: 220px;
+                height: 50px;
+                background-color: white;
+                border: 0;
+            }
+        #footer p {
+            text-align: right;
+            font: x-small italic sans-serif;
+            margin-right: 5px;
+        }
+        span {
+            font-size: 30pt;
+        }
+
+        tr td#k{
+            height:120px;
+            color:chocolate;
+            text-shadow:20px 12px 2px #808080;
+            font-size:x-large;
+        }
+        #fixedbutton {
+            position:fixed; 
+            width:150px;
+            height:50px;
+            right:20px;
+            bottom:100px;
+        }
+    </style>
+
+    <script>
+      
+        onmou
+
+    </script>
+
+</head>
+
+<body>
+    <center>
+        <div id="wrap">
+            <div id="top"><a href="index.html"><img src="ㅇ.png" id="a" title="메인 바로가기" /></a></div>
+            <div id="left">
+                <input type="button" value="test1" id="but" >
+                <input type="button" value="test2" id="but">
+                <input type="button" value="test3" id="but">
+                <input type="button" value="test4" id="but">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <select name="univ">
+                    <option value="선택">선택</option>
+                    <option value="www.gacheon.co.kr" onclick="">가천대</option>
+                    <option value="www.swdm.co.kr">소설경</option>
+                </select>
+                <input type="submit" value="이동" onclick="go_univ()">
+           
+            </div>
+       
+            <div id="content" >
+                <table>
+                    <tr>
+                    <td colspan="3" id="k"><h1>Test text !</h1></td>
+                    </tr>
+                    <tr><td><img src="4menmain.jpg" /></td></tr>
+
+                  </table>
+            <p>img test and the initial page of index</p>
+           
+            </div>
+            
+            <div id="footer"><p>Last modified on 9.Nov.2013 <br> maintained by <a href="mailto:fff@naver.com">  Student.201333475</a></p>
+            
+            <br /><br /><p>Term Project for Webprogramming.</p></div>
+        </div>
+    </center>
+    <input type="button" id="fixedbutton" value="움직이는 스크롤바 test" />
+</body>
+
+</html>

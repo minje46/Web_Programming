@@ -1,0 +1,201 @@
+﻿<HTML>
+<HEAD>
+	<TITLE>MY WEBPAGE</TITLE>
+	<meta name="author" content="Lee Byoung Ho">
+	<style type="text/css">
+	@import url(css.css);
+	#c1{
+		float: left;
+		margin: 20px;
+		padding: 1em 1em 0 0;
+		height:300px;
+		font-size: 15pt;
+		color:red;
+		weight:200px;
+		}
+	.c2{
+		float: left;
+		margin: 20px;
+		border: solid 2px #4FC9DE;
+		padding: 1em 1em 1em 1em;
+		background:#85FFFF;
+		height: 400px;
+		
+		}
+	.c2 ol li{
+		font-size= 12pt;
+		color: #9FC93C;
+		font-family: 휴먼둥근헤드라인 ;
+		}
+	#c4{
+		float: left;
+		margin: 20px;
+		padding: 1em 1em 0 0;
+		height:300px;
+		font-size: 13pt;
+		color:red;
+		weight:200px;
+		}
+	.p1{
+		font-size= 12pt;
+		color: #FF007F;
+		font-family: 휴먼둥근헤드라인 ;
+		font-weight: bold;
+		}
+	.c4{
+		background:url(p1.jpg);
+		margin:20px;
+		float:left;
+		font-size: 10pt;
+		color: red;
+		font-weight: bold;
+		font-family: 궁서;
+		float:center;
+		weight:200px;
+		height:400px;
+		}
+	a:visited{color : purple;}
+	a:hover{color: red;}
+	
+	</style>
+	<script>
+function startTime()
+		{
+			var today=new Date();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+                        
+                        var date = (new Date()).toString().substr(0,10);                       
+                        document.getElementById('txt').innerHTML= date + " ";
+			document.getElementById('txt').innerHTML+=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+		function checkTime(i)
+		{
+			if (i<10)
+			  {
+			  i="0" + i;
+			  }
+			return i;
+		}
+</script>
+
+</head>
+<body onload="startTime()">
+	<script>
+	alert("welcome my homepage");
+	</script>
+	<div id="page">
+	<div id="h1">DO YOU WANT ME?</div>
+	</div>
+	<hr>
+	
+	<div class="c2"> 
+		
+		<ol>
+			<li><div class="p1">My Favorite Things</div>
+				<ol><br>
+					<li>스포츠
+						<ul>
+							<li><a href="new2.html">야구</a></li>
+							<li><a href="new3.html">축구</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="new4.html">영화</a></li>
+					<br>
+					<li>
+						웹툰
+						<select name="웹툰" multiple onchange="if(this.value)window.open(this.value)">
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=335885">가우스전자</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=183559&weekday=mon">신의탑</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=tue">마음의소리</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=503253&weekday=wed">웃지 않는 개그반</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=186811&weekday=thu">치인트</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=507637&weekday=fri">금요일</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=521504&weekday=sat">모던패밀리</option>
+							<option value="http://comic.naver.com/webtoon/list.nhn?titleId=578105&weekday=mon">네가없는세상</option>
+						</select>
+			</li>
+				</ol>
+				</li>
+				<br>
+			<li><a href="new5.html"><div class="p1">My Roll Model</div></a></li>
+		</ol>
+	</div>
+	<div class="c4">
+			<marquee direction="up" scrollmount="10">
+			<pre>
+			오늘의 시
+			꽃처럼 웃을날 있겠지요.				
+						김용택
+	
+			작년에 피었던 꽃	
+			올해도 그자리 거기 저렇게
+			꽃 피어 새롭습니다.
+			작년에 꽃 피었을 때 서럽더니
+			올해 그자리 거기 저렇게
+			꽃이 피어나니
+			다시 또 서럽고 눈물 납니다
+			이렇게 거기 그자리 피어나는 꽃
+			눈물은 서서 바라보는 것은
+			꽃 피는 그자리 거기
+			당신이 없기 때문입니다
+			당신없이 꽃 핀들
+			서럼움과 눈물입니다
+			
+			작년에 피던 꽃
+			올해도 거기 그자리 그렇게
+			꽃피었으니
+			내년에도 꽃 피어나겠지요
+			내년에도 꽃피면
+			내후년,내내후년에도
+			꽃피어 만발할테니
+			거기 그자리 꽃피면
+			언젠가 당신 거기 서서
+			꽃처럼 웃을 날 보겠지요
+			
+			개울물소리
+			석용원
+			비내리면
+			산 부풀고
+			산 부풀면
+			개울물 넘친다.
+			비내리면 산자락
+			빗소리 모았다가
+			비 그친 골자기
+			개울물소리로 흘러흐른다
+			</pre>
+			</marquee>
+	</div>
+		
+	<div id="c1"> 
+			<form action="" method="post" action="http://somesite/someprogram">	
+		
+			아이디 &nbsp; : <input type="text" name="username" ><br>
+			비밀번호 : <input type="password" name="password" ><br>
+		
+   
+			<input type="submit" value="로그인">
+			<input type="button" value="회원가입">
+			</form>
+			<div id="txt"></div>
+			<div id="c4">
+			my name= 이병호<br>
+			my age=  21<br>
+			my email=<a href=mailto:dlqudgh0731@naver.com>항시 기다립니다</a><br>
+			my school=<a href="http://www.gachon.ac.kr/main.jsp" target="_blank">가천대학교</a><br>
+			소프트웨어 설계 경영학과<br>
+			my phone number=010-7164-5362
+			</div>
+		
+			
+			
+	</div>		
+		
+	
+</BODY>
+</HTML>

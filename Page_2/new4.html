@@ -1,0 +1,154 @@
+﻿<html>
+<head>
+	<title>영화</title>
+	<style type="text/css">
+	@import url(css.css);
+	.back{ background:url(background_4.jpg);
+	}
+	.c1{
+		font-size : 27pt;
+		color: #FF24FF;
+		font-famliy:고딕;
+		}
+	.c2{
+		font-size= 4pt;
+		font-family:드림고딕;
+		color:red;
+		}
+	a:visited{color : purple;}
+	a:hover{color: red;}
+	</style>
+	<script>
+	function go(){
+	var x= alert("thank you");
+	}
+	function mDown(obj) {obj.src = "조니뎁.jpg";}
+    function mUp(obj) {obj.src = "http://tv03.search.naver.net/nhnsvc?size=120x150&quality=9&q=http://sstatic.naver.net/people/178/201201251923234081.jpg";}
+	function mDown2(obj) {obj.src = "아만다.jpg";}
+    function mUp2(obj) {obj.src = "http://tv03.search.naver.net/nhnsvc?size=120x150&quality=9&q=http://sstatic.naver.net/people/162/201211211527104811.jpg";}
+	function mover(obj) {obj.src="가위손.jpg"}
+    function mout(obj) {obj.src="http://movie2.phinf.naver.net/20111223_46/1324636721833vQALr_JPEG/movie_image.jpg?type=m203_290_2";}
+	function mover2(obj) {obj.src="클로이.jpg"}
+    function mout2(obj) {obj.src="http://movie2.phinf.naver.net/20111223_265/1324648249184lvN5A_JPEG/movie_image.jpg?type=m203_290_2";}
+	</script>
+</head>
+<body>
+	<div id="page">
+	<div class="back">
+	<a name ="top">
+	<a href="#bot"><font size="5">go to bot</font></a><br>
+	<div id="h1">LEE'S MOVIE</div>
+	<div class="c1">
+	<a href="new4.html#section1">FAVORITE film genres</a><br>
+	<a href="new4.html#section2">FAVORITE ACTOER MEN&AMP;WOMEN</a><br>
+	<a href="new4.html#section3">IMPRESSIVED MOVIE</a></div>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+	<a name="section1"><div class="c1">FAVORITE film genres </div></a>
+	<form method="get">
+            <font size="6" color="red" face="궁서"><h3>여러분들이 좋아하는 영화장르는?</h3></font><br>
+            <input type="checkbox" name="호러"> 호러<br>
+            <input type="checkbox" name="멜로"> 멜로<br>
+            <input type="checkbox" name="19금"> 19금<br>
+            <input type="checkbox" name="코믹" CHECKED> 코믹<br>
+            <input type="checkbox" name="액션"> 액션<br>
+			<input type="checkbox" name="기타"> 기타<br>
+			<input type="text" name="기타">
+			<p><input type="submit" value="선택하기" onclick="go()")><input type="reset"></p>
+	</form>
+	<div class="c1"><font size="4">
+	<pre>
+	내가 좋아하는 영화 장르는 공포/호러 이다.
+	이런것을 좋아한다 하면 많은 사람들이 물어볼 것이다
+	&quot;넌 왜 이런걸 보니&quot;라고
+	호러/공포의 큰 묘미는 뭔가 깜짝깜짝 놀라면서 오는 스릴감일것이다.
+	여러분들도 뭔가 스릴감과 시원함을 느끼고 싶을떄 공포영화 한편 시청하는 것도 좋다 생각한다.
+	</font>
+	</pre>
+	</div>
+	<table>
+		<tr>
+			<td><img src="http://tv03.search.naver.net/contents?size=120x171&quality=10&q=http://imgmovie.naver.net/mdi/mi/0928/92823_P16_143047.jpg"></td>
+			<td><img src="http://tv03.search.naver.net/contents?size=120x171&quality=10&q=http://imgmovie.naver.net/mdi/mi/0537/53752_P01_090312.jpg"></td>
+			<td><img src="http://tv03.search.naver.net/contents?size=120x171&quality=10&q=http://imgmovie.naver.net/mdi/mi/0363/C6342-00.jpg"></td>
+		</tr>
+		<tr class="c2">
+			<td>현재 큰 인기몰인중인 컨저링</td>
+			<td>공포영화의 새로운 장르를 개척한 rec시리즈</td>
+			<td>좀비영화를 부흥시킨 28시리즈</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+	<br>
+	<a name="section2"><div class="c1">FAVORITE ACTOER MEN&AMP;WOMEN</div></a>
+	<br><br>
+	<table border="6">
+		<tr>
+			<TD width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+			<td width="300"><p align="CENTER">MEN</P>
+			<TD width="300"><P ALIGN="CENTER">WOMEN</P>
+		</TR>
+		<TR>
+			<TD width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+			<TD width="300"><IMG id="img1" SRC="http://tv03.search.naver.net/nhnsvc?size=120x150&quality=9&q=http://sstatic.naver.net/people/178/201201251923234081.jpg" onMouseDown="mDown(this)" onMouseUp="mUp(this)"></TD>
+			<TD width="300"><IMG id="img2" SRC="http://tv03.search.naver.net/nhnsvc?size=120x150&quality=9&q=http://sstatic.naver.net/people/162/201211211527104811.jpg" onMouseDown="mDown2(this)" onMouseUp="mUp2(this)"></TD>
+		</TR>
+		<TR class="c2">
+			<TD width="300">이름</TD>
+			<TD width="300">조니뎁</tD>
+			<TD width="300">아만다 사이프리드</TD>
+		</TR>
+		<tr class="c2">
+			<TD width="300">대표작</TD>
+			<TD width="300">
+			<img src="http://movie2.phinf.naver.net/20111223_46/1324636721833vQALr_JPEG/movie_image.jpg?type=m203_290_2" onmouseover="mover(this)" onmouseout="mout(this)">
+		<a href="http://movie.naver.com/movie/bi/pi/filmo.nhn?code=788#tab">더많은작품보러가기</a>
+			</td>
+			<TD width="300"><img src="http://movie2.phinf.naver.net/20111223_265/1324648249184lvN5A_JPEG/movie_image.jpg?type=m203_290_2" onmouseover="mover2(this)" onmouseout="mout2(this)">
+			<a href="http://movie.naver.com/movie/bi/pi/filmo.nhn?code=67893#tab">더많은작품보럭가기</a>
+			
+			</td>
+		</tr>
+		<tr class="c2">
+			<TD width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+			<td width="300">
+				<p>조니뎁의 경우 정말 모든작품을 볼정도로 좋아한는 배우이다.<br>
+				대표작으로 캐리비안의 해적 시리즈뿐만 아니라<br>
+				팀버튼 감독과 함께한 수많은 명작들이 있다.<br>
+				항상 다양한 캐릭터로 관객들을 찾아오는 훌륭한 배우이다.</p>
+				</font>
+			</td>
+			<td width="300">
+				<p>아만다 사이프리드는 정말 아름다운 배우이다.<br>
+				작은 키에 비해 뿜어져 나오는 연기의 대한 열정은 엄청나다<br>
+				인타임을 통해 슈퍼스타로 올라섰으며 최근에도 왕성한 활동을 하고있다.</p>
+				</font>
+			</td>
+		</tr>	
+	</TABLE>	
+	<a name="section3"><div class="c1">IMPRESSIVED MOVIE</div></a>
+	<ol>
+		<li><img src="http://tv03.search.naver.net/contents?size=120x171&quality=10&q=http://imgmovie.naver.net/mdi/mi/0625/F2586-001.jpg"><font size="5" color="red" face="궁서">다크나이트시리즈</font>
+		<blockquote><b>
+		다크나이트 시리즈는 볼때마다 느껴지는 게 많아지는 영화이다.<br>어두운 도시의 모든걸 짊어 지고 떠나가는 영웅<br>
+		특히 시리즈의 첫편에 조커는 정말 인상깊은 캐릭터엿다.<br><img src="http://cfile240.uf.daum.net/image/242F444751ED3C45076653"width="200"height="200">조커</b></blockquote>
+		</li>
+		<li><img src="http://tv03.search.naver.net/contents?size=120x171&quality=10&q=http://imgmovie.naver.net/mdi/mi/0875/87566_P05_171824.jpg"><font size="5" color="red" face="궁서">언터쳐블 1%의 우정</font>
+		<blockquote><b>
+		언터쳐블 1%의 우정은 정말 감명깊게 본 영화이다. 정말 이루어 지기 힘든 사람들의 끈끈한 우정<br>많은 것을 배울 수 있엇던 영화이다.<br></blockquote></li> 
+	</ol>	
+	
+	
+	
+	<a href="#top"><font size="5">go to top</font></a>
+	<a name="bot">
+	</div>
+	</div>	
+</body>
+</html>	

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Purpose&Solution</title>
+<style type="text/css">
+#page{ margin : 1% 4% 1% 4%; }
+#middle { 
+         background : url(research_background.jpg);
+         border-top : 2px solid blue;
+         border-bottom : 2px solid blue;
+		 padding-top : 5px;
+		 margin-top : 3%;
+		 }
+</style>
+
+<script>
+function mOver1(obj){ obj.src="research_solution2.jpg"; }
+function mOut1(obj){ obj.src="research_solution.jpg";}
+</script>
+</head>
+<body>
+<div id="page">
+<div id="middle">
+<center>
+<img src="research_purpose.jpg" alt="research_purpose"><br>
+<a href="sub_main.html" target = "_blank"><img src="research_solution.jpg" alt="research_solution" onmouseover="mOver1(this)" onmouseout="mOut1(this)"></a>
+</center>
+</div>
+</div>
+</body>
+</html>

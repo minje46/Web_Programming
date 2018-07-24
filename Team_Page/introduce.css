@@ -1,0 +1,49 @@
+﻿#page{margin-right:20%; margin-left:20%;
+		border-style:solid;
+		background-image : url("introduce_background(2).png");
+		}
+	#top{		
+		
+		background-image : url("introduce_background(1).jpg");
+		border-top: gray solid 1px;
+		border-bottom: gray solid 2px;
+	
+		}
+	.t{ width:15%;}
+		
+	.cont{
+		font-size:large;
+		color: black; 
+		font-weight: bold;
+		border-style:dotted;
+		width=75%;
+	}
+        .cont2{
+		font-size:large;
+		color: red; 
+		font-weight: bold;
+		width=75%;
+	}
+	#footer p {
+		text-align: right;
+		font: x-small italic sans-serif;
+		margin-right:5px;
+				
+	}
+	.leftmenu{
+		background-color:#CEF279;
+		position: fixed;
+		width: 12%;
+		float: left;
+		margin-top : 5.5%;
+		margin-left : 7%;
+		font-size:x-large;
+		font-weight:bold;
+		}
+#gg
+{
+color : purple;
+font-family : times;
+font-weight : bold;
+font-size : large;
+}

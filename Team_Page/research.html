@@ -1,0 +1,201 @@
+﻿<html>
+<head>
+<title>Festival time for each Counties</title>
+	<style type="text/css">
+#page{	margin :0% 20% 0% 20%;}
+	.leftmenu{
+		background-color:#CEF279;
+		position: fixed;
+		width: 12%;
+		float: left;
+		margin-top : 5.5%;
+		margin-left : 7%;
+		font-size:x-large;
+		font-weight:bold;
+		}
+	#ff{color:black; font-family:times; font-weight:bold;}
+#middle { 
+         background : url(research_background.jpg);
+         border-top : 2px solid white;
+         border-bottom : 2px solid white;
+		 padding-top : 2px;
+		 }
+#txt{font-family : times; color : black;}
+#imgsrc { float:left; }
+#contents { font-weight : bold; text-align : center; }
+.space{font-size:large; font-weight : bold; text-align : justify;}
+legend{ font-size:x-large;}
+	</style>
+	<script type="text/javascript">
+	
+	alert("Welcome to Research Page! ");
+		
+		var cnt=0;
+		function Output(form)
+		{
+			for(var i = 0; i < form.job.length; i++) 
+			{
+				if(form.job[i].checked == true) 
+					{
+						cnt++;
+						alert("당신이 원하는 직업은 " + form.job[i].value + " 입니다.");
+					}
+			}
+		}
+	</script>
+	
+	
+<script>
+	//하위메뉴 만들기
+	function init() {
+		document.getElementById('submenu1').style.display='none';
+		document.getElementById('submenu2').style.display='none';
+		document.getElementById('submenu3').style.display='none';
+		}
+
+	function openSubmenu(submenu) {
+		document.getElementById(submenu).style.display='';
+		}
+	function closeSubmenu(submenu, self) {
+		document.getElementById(submenu).style.display='none';
+		}
+		
+</script>
+
+<script>
+	function startTime(){
+var today = new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('ff').innerHTML="&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+h+":"+m+":"+s;
+t=setTimeout('startTime()',1000);
+}
+
+function checkTime(a){
+if(a<10)
+{ a="0" + i; }
+return a;
+}
+</script>
+
+</head>
+<body onload="startTime()">
+<div  class="leftmenu">
+	<li onmouseover= "openSubmenu('submenu1')"; onmouseout="closeSubmenu('submenu1')"> 
+	<a href = "index.html">Go Home<pre></pre></a>
+	<div id='submenu1'>
+	</div>
+	</li>
+	<li onmouseover= "openSubmenu('submenu2')"; onmouseout="closeSubmenu('submenu2')"> 
+	<a href = "sub_main.html" target = "_blank">Go Major<pre></pre></a>
+	<div id='submenu2'>
+	<ul>
+	<table>	
+	<tr>
+		<td><a href = "sub_programmer.html"> Programmer </a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_network.html">Network</a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_secretary.html">Secretary</a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_manager.html">Management</a></td>
+	</tr>
+	</table>
+	</ul>
+</div>
+</li>
+	<li onmouseover= "openSubmenu('submenu3')"; onmouseout="closeSubmenu('submenu3')"> 
+	Another<pre></pre>
+	<div id='submenu3'>
+	<ul>
+	<table>	
+		<tr>
+			<td><a href = "notice.html">Notice</a></td>
+		</tr>
+		<tr>
+			<td><a href = "introduce.html">Introduce</a></td>
+		</tr>
+		<tr>
+			<td><a href = "research.html">Research</a></td>
+		</tr>
+	</table>
+	</div>
+	<li>
+	The Time is
+    <div id="gg"> </div>
+	</li>
+</div>
+<div id="page">
+<center>
+<img src="research.jpg" alt="research">
+</center>
+<div id="middle">
+
+
+
+	<div id="imgsrc">
+	 <img src="research_news.jpg" width = "450" alt="research_news"><br>
+	 <img src="research_news2.jpg" height = "560"  width = "450" " alt="research_news2">
+	 </div>
+	<div id="contents">
+	 <fieldset>
+		<form method="get" action="research_sub.html">
+		<legend>Step1</legend>
+			<div class="space">
+			<br>
+			<label for="ans">Q1. Do you know the reason for a newspaper article?</label><br><br>
+			<label><input type="radio" name="article" value="yes"> Yes</label>
+			<label><input type="radio" name="article" value="no"> No</label>
+			<label><input type="radio" name="article" value="nothink"> I don't know</label>
+			</div >
+			<div class="space">
+			<br><label for="career">Q2. Do you think that studying majors related to your career is going well?</label><br><br>
+			<label><input type="radio" name="studying" value="yes"> Yes</label>
+			<label><input type="radio" name="studying" value="no"> No</label>
+			<label><input type="radio" name="studying" value="nothink"> I don't know</label>
+			</div>
+			<div class="space">
+			<br><label for="study">Q3. You don't know what major to study,so, have you ever experienced no motivation?</label><br>
+			<br><label><input type="radio" name="studying2" value="yes"> Yes</label>
+			<label><input type="radio" name="studying2" value="no"> No</label>
+			</div>
+			<div class="submit">
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+			</div>
+		</form>
+	</fieldset>
+	<fieldset>
+		<legend>Step2</legend>
+		<div class="space">
+		<br><label>What is your desired job related to major?(valid multiple responses)</label>
+		<FORM name="form" multiple>
+		 <INPUT type="checkbox" name="job" value="Programmer">1. Programmer <BR>
+		 <INPUT type="checkbox" name="job" value="Network">2. Network <BR>
+		 <INPUT type="checkbox" name="job" value="Security">3. Security <BR>
+		 <INPUT type="checkbox" name="job" value="CEO">4. CEO <BR><BR>
+		 <INPUT type="button" value="SELECT" onClick="Output(this.form)">
+		</FORM>
+		</div>
+	</fieldset>
+	</div>
+		</div>
+
+	
+	<script>
+		var info;
+			for(var i = 0; i < cnt; i++) 
+			{
+				info=form.nation[i].value;
+			}
+			document.write(info.toUpperCase()+ "<br>");
+	</script>
+	</div>
+</body>
+</html>

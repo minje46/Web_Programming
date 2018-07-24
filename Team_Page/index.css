@@ -1,0 +1,89 @@
+﻿body{
+
+ font-family : times;
+ }
+ h2{ color : black;
+        font-weight : bold;
+		font-style : italic;
+		vertical-align : middle;}
+ 
+ #page{ background-image : url("index_background.jpg");
+		margin :0% 20% 0% 20%; }
+
+#pagetitle { 
+            background-image : url("mainlogo.jpg");
+            font-family : times;
+            font-style : italic;
+			font-weight : bold;
+			font-size : xx-large;
+			vertical-align : top;
+			height:3em;
+			width:100%;
+			}
+		
+			
+#middle { border-top : 2px solid white;
+         border-bottom : 2px solid white;
+		 padding-top : 2px;
+		 width:100%;
+		 }
+
+#leftnav{ width : 40%;
+          float : left;
+		  padding:1em 1em 1em 1em;
+		  margin-top:1em;
+		  }
+#content{ 
+			width:50%;
+			margin-left:25em;
+			padding-rignt:2em;
+		}
+
+.alert{ font-size : xx-large;
+        font-style : italic;
+		font-weight : bold;
+        background-color : skyblue;
+		color : purple;	
+		
+		}
+		  
+		  
+#footer p{ text-align : right;
+          font : small italic;
+          margin-right : 1em;
+          padding-right : 2em; }
+#right { float:right;
+		margin-right:2em;
+		padding: 1em,1em,1em,1em;
+		width:20%;
+		}
+#mainmenu ul li { float:left; /* 메뉴를 좌우로 배치한다. */
+				overflow:hidden; /* li태그의 점을 빼준다. */
+			margin-right: 10px; /* 메뉴 항목들 간격을 늘린다. */
+				}
+
+#ee
+{
+color : purple;
+font-family : times;
+font-weight : bold;
+font-size : large;
+}
+em{color : white;}
+		
+a : link{ color : blue;}
+a : hover{ color : purple;}
+a : visited{ color : red;}
+.leftmenu{
+		background-color:#CEF279;
+		position: fixed;
+		width: 12%;
+		float: left;
+		margin-top : 5.5%;
+		margin-left : 7%;
+		font-size:x-large;
+		font-weight:bold;
+		}
+
+		  
+		  

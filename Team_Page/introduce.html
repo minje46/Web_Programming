@@ -1,0 +1,146 @@
+﻿<html>
+<head>
+	<title> 자기소개</title>
+	<style type="text/css"> 
+	</style>
+	<link rel="stylesheet" type="text/css" href="introduce.css">
+	<!-- 펑션 -->
+<!-- 시계-->
+<script>
+function startTime()
+{
+var today = new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('gg').innerHTML = "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp" + h+":"+m+":"+s;
+t=setTimeout('startTime()',1000);
+}
+
+function checkTime(a){
+if(a<10)
+{ a="0" + i; }
+return a;
+}
+</script>	
+	
+</head>
+<body onload = "startTime()">
+	<!-- side menue -->
+<div  class="leftmenu">
+	<li onmouseover= "openSubmenu('submenu1')"; onmouseout="closeSubmenu('submenu1')"> 
+	<a href = "index.html">Go Home<pre></pre></a>
+	<div id='submenu1'>
+	</div>
+	</li>
+	<li onmouseover= "openSubmenu('submenu2')"; onmouseout="closeSubmenu('submenu2')"> 
+	<a href = "sub_main.html" target = "_blank">Go Major<pre></pre></a>
+	<div id='submenu2'>
+	<ul>
+	<table>	
+	<tr>
+		<td><a href = "sub_programmer.html"> Programmer </a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_network.html">Network</a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_secretary.html">Secretary</a></td>
+	</tr>
+	<tr>
+		<td><a href = "sub_manager.html">Management</a></td>
+	</tr>
+	</table>
+	</ul>
+</div>
+</li>
+	<li onmouseover= "openSubmenu('submenu3')"; onmouseout="closeSubmenu('submenu3')"> 
+	Another<pre></pre>
+	<div id='submenu3'>
+	<ul>
+	<table>	
+		<tr>
+			<td><a href = "notice.html">Notice</a></td>
+		</tr>
+		<tr>
+			<td><a href = "introduce.html">Introduce</a></td>
+		</tr>
+		<tr>
+			<td><a href = "research.html">Research</a></td>
+		</tr>
+	</table>
+	</div>
+	<li>
+	The Time is
+    <div id="gg"> </div>
+	</li>
+</div>
+	<div id="page">
+	<div id="top">
+	<center><h1 onmouseover="this.innerHTML='궁금하냐'" onmouseout="this.innerHTML='자기소개하기'" >자기소개하기</h1>
+	<p> 사진클릭시 페이스북으로 이동</center></p>
+	</div>
+
+
+	<table width="785" height="600" align="center">
+		<tr>
+			<td class="t"><a target="_blank" href="https://www.facebook.com/profile.php?id=100002053865611">
+			<img src="caricature_jongchan.jpg" alt="사진" width="200" height="200"onmouseover="src='scribble_jongchan.png'" onmouseout="src='caricature_jongchan.jpg'"></a></td>
+			<td class="cont">
+				<ul>
+					<li>제작 : Main Hompage 수정 및 완성, 자료 조사, Side Menu function 제작, Logo 제작, Sub_Programmer 수정, 자기소개서 제작, 자칭 팀의 리더</li>		
+					<br><br>
+
+				<span class="cont2"><li>느낀점 : 팀 프로젝트 라는 게 이렇게 힘든지 몰랐다. 얘들이 말을 너무 안 듣는다. 그랬기에 많은 것이 남는 뜻깊은 팀 프로젝트였다. (얘들이 형 취급을 안해준다.ㅠ)</li></span>
+					
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="t" ><a target="_blank" href="https://www.facebook.com/profile.php?id=100002053865611">
+			<img src="caricature_jeonggun.jpg" alt="사진" width="200" height="200" onmouseover="src='scribble_jeonggun.png'" onmouseout="src='caricature_jeonggun.jpg'"></a></td>
+			<td class="cont">
+				<ul>
+					<li>제작 : Main Hompage 초안, Research 제작, Notice 제작, Icon 제작, Sub_Manager 수정, 팀의 배고픔을 담당 </li>		
+					<br><br>
+					<span class="cont2"><li>느낀점 : 떄려 치고싶은 마음이 굴뚝같았지만, 팀 프로젝트라는 압박 하에 수행된 일을 다 끝마치느라 힘들었다. 완성된 팀의 결과를 보니 뿌듯했고 조원들과는 돈독해지고 좋았다.(앞으로 김종찬씨와는 팀프안해!) </li></span>
+					
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<div><td class="t"><a target="_blank" href="https://www.facebook.com/profile.php?id=100002053865611">
+			<img src="caricature_yoonho.jpg" alt="사진" width="200" height="200" onmouseover="src='scribble_yoonho.png'" onmouseout="src='caricature_yoonho.jpg'"></a></td></div>
+			<td class="cont">
+				<ul>
+					<li>제작 : java기능에 미흡하기에 기초 html 보조, 디자인 조사, 자료 조사, Sub_Network 수정, 동영상 주인공, 동영상 각본, 동영상 연출, 팀의 7시간을 담당(섭외하는데 7시간걸림)</li>		
+					<br><br>
+					<li><span class="cont2">느낀점 : 억지로라도 웹 프로그래밍을 공부할 수 있어서 좋은 기회인줄 알았지만, 이건 지옥이었다. 김종찬 형이 집을 안보내주었다. 공갈 협박이었다.</span></li>
+					
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="t">	<a target="_blank" href="https://www.facebook.com/profile.php?id=100002053865611">
+			<img src="caricature_minje.jpg" alt="사진" width="200" height="200" onmouseover="src='scribble_minje.png'" onmouseout="src='caricature_minje.jpg'"></a></td>
+			<td class="cont">
+				<ul>
+					<li>제작 : Main Hompage 도움, Side menu 도움, Sub_Main 제작, Sub_Programmer 제작, Sub_Security 제작, Sub_manager 제작, Sub_Network 제작, 팀의 불평을 담당</li>		
+					<br><br>
+					<li><span class="cont2">느낀점 : 팀 프로젝트에서 정상적인 일의 진행을 위해 모든 컴플레인을 담당해서 힘들었지만 자칭 리더라는 종찬이형이 의외로 잘 이끌어 주셔서 나름 재미있게 일을 했던것 같다.(김화백 그림실력....)</span></li>
+					
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<div id="footer">
+		<p>Last modified on Sunday, 08-Dec-2013 13:29:37 BST<br>
+		Maintained by <a href="mailto:kjc@naver.com">Jong chan</a>
+		</p>
+	</div>
+	</div>
+	
+</body>
+</html>

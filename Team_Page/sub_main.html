@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+#top
+{
+margin-top:0.3cm;
+margin-right:0.19cm;
+margin-left:0.11cm;
+color:gold;
+text-align : center;
+}
+ #page{margin :0% 22% 0% 0%;}
+			
+ #title{ font-size : xx-large; color : black; font-family : times; font-style:italic; font-weight:bold;}
+ .a{color:blue;}
+ .b{color:red;}
+ 
+		
+#middle
+{
+padding-right: 60px;
+padding-bottom: 30px;
+padding-left: 200px;
+margin-left:15%;
+}
+h1 { color: blue;
+       background color:white; font-weight:bold;}
+h3 { font-style:고딕;
+       background color:white; font-weight:bold; }
+body { color: navy; }
+</style>
+<script>
+function over1(obj) {obj.src="submain_click.jpg";}
+function r_over1(obj) {obj.src="submain_c.jpg";}
+function over2(obj) {obj.src="submain_click.jpg";}
+function r_over2(obj) {obj.src="submain_network.jpg";}
+function over3(obj) {obj.src="submain_click.jpg";}
+function r_over3(obj) {obj.src="submain_secretary.jpg";}
+function over4(obj) {obj.src="submain_click.jpg";}
+function r_over4(obj) {obj.src="submain_ceo.jpg";}
+function close_sub()
+{
+window.opener = "nothing";
+window.open('', '_parent', '');
+window.close();
+}
+</script>
+</head>
+
+<body background = "introduce_background(2).png">
+<script>
+var x = "소프트웨어설계*경영학과를 졸업하고 난 뒤의 일에 대해 알고있습니까?";
+x = confirm(x);
+if (x == 1)
+close_sub(this);
+</script>
+<center>
+<div id = "top">
+<div id="title">What's your interesting job?</div> 
+<h3><span class="a">Mouse over</span> <br> & <br><span class="b"> Click!! </span></h3> 
+<div id="page">
+<div id = "middle">
+<a href = "sub_programmer.html">
+<image align="bottom" src="submain_c.jpg" alt="c언어" width="300" height="300" onmouseover="over1(this)" onmouseout="r_over1(this)">
+</a>
+<a href = "sub_network.html">
+<image align="bottom" src="submain_network.jpg" alt="네트워크" width="300" height="300" onmouseover="over2(this)" onmouseout="r_over2(this)">
+</a><br>              
+<a href = "sub_secretary.html">
+<image align="bottom" src="submain_secretary.jpg" alt="정보보안" width="300" height="300" onmouseover="over3(this)" onmouseout="r_over3(this)">
+</a>
+<a href = "sub_manager.html">
+<image align="bottom" src="submain_ceo.jpg" alt="ceo" width="300" height="300" onmouseover="over4(this)" onmouseout="r_over4(this)">
+</a>
+</div>
+</center>
+</div>
+</div>
+</body>
+</html>

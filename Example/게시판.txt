@@ -1,0 +1,111 @@
+<html>
+<head>
+<title> Mini Board</title>
+<?php
+   /*$connect= mysql_connect('localhost','root','apmsetup');
+   mysql_select_db('db1',$connect);
+   $q=mysql_query('select * from db1 order by id desc');
+   while($data=mysql_fetch_array($q)){
+      echo $data['id'].' ';
+      echo $data['Title'].' ';
+      echo $data['Content'];
+      echo '<br>';
+      }
+      mysql_close($connect);*/
+      $host = "localhost"; $user = "root";
+      $password = "apmsetup";
+      $mydb = mysql_connect($host, $user, $password) or die(mysql_error());
+      $db_id = mysql_select_db('db1', $mydb) or die(mysql_error());
+      if (isset($_POST['title']) && isset($_POST['content'])){
+      $title = htmlspecialchars($_POST['title']);
+      $content = htmlspecialchars($_POST['content']);
+      // generating SQL
+      $sql = "INSERT INTO db1(Title,Content) VALUES('$title', '$content')";
+      mysql_query($sql, $mydb);
+      }
+      if(isset($_GET['del'])){
+      $del=$_GET['del'];
+      mysql_query("delete from db1 where id=".$del.";");
+      }
+      // generate sql
+      $sql = "SELECT * FROM db1";
+      $result = mysql_query($sql, $mydb) or die(mysql_error());
+      $total_record = mysql_num_rows($result); // number of records
+      $output_str .= "Output Board Table in My Database <br>";
+      
+
+      // output of record content
+      $output_str .= "total_record=".$total_record."<p>";
+      $output_str .= "<table border='2' style='border-collapse:collapse;'>";
+      $output_str .= "<tr bgcolor='#f5fad0'><td>id</td><td>title</td>
+      <td>content</td></tr>";
+      while($row_array = mysql_fetch_array($result)) {
+      $output_str .= "<tr>\n\t";
+      $output_str .= "<td width='30'><a href=?del=$row_array[id]>$row_array[id]</a></td>";
+      $output_str .= "<td width='100'>$row_array[Title]</td>";
+      $output_str .= "<td width='300'>$row_array[Content]</td>";
+      $output_str .= "\n</tr>";
+      }
+      
+      
+      echo $output_str;
+      mysql_close($mydb) or die(mysql_error());
+?>
+
+</head>
+<body>
+
+      <form method="post" action='mydb.php'>
+         <table>
+         <tr>
+         <td width="50">title</td>
+         <td valign="middle" width="200">
+         <input type="text" size="70" name="title" value="$title_modify"></td>
+         </tr>
+         <tr>
+         <td valign="top">content</td>
+         <td> <textarea cols="69" rows="10" name="content">
+         $content_modify</textarea></td>
+         </tr>
+         </table>
+         <input type="hidden" name="id" value="$modify_id">
+         <input type="submit" value="upload">
+         <input type="reset" value="cancel">
+   </form>
+</body>
+</html>
+
+
+<html>
+<head>
+<title> Mini Board</title>
+<?php
+if (isset($_POST['title']) && isset($_POST['title']) {
+      $output_str .= "upload complete!";
+      $title = htmlspecialchars($_POST['title']);
+      $content = htmlspecialchars($_POST['content']);
+      // generating SQL
+      $sql = "INSERT INTO board(Title,Content) VALUES('$title', '$content')";
+      mysql_query($sql, $mydb);
+}
+?>
+</head>
+<body>
+      <form method="post" action='mydb.php'>
+         <table>
+         <tr>
+         <td width="50">title</td>
+         <td valign="middle" width="200">
+         <input type="text" size="70" name="title"></td>
+         </tr>
+         <tr>
+         <td valign="top">content</td>
+         <td> <textarea cols="69" rows="10" name="content">
+         input content</textarea></td>
+         </tr>
+         </table>
+         <input type="submit" value="upload">
+         <input type="reset "value="cancel">
+   </form>
+</body>
+</html>

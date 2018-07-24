@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>JavaScript P5 Ex1 & Ex2</title>
+</head>
+
+<body>
+    <h1>JS EX</h1>
+    <h3 id="ex1">EX1</h3>
+    <img id="img1" src="apple.jpg" width="500">
+    <p>The elements above were changed by JavaScript.</p>
+    <br><br><br><br><br><br>¡¦
+
+    <h3 id="ex2">Exercise 2</h3>
+    <a href="#ex1" name="ex2link">Go to exercise 1</a><br>
+    
+    <script>
+        //Ex 1
+        var h1 = document.getElementsByTagName("h1");
+        h1[0].innerHTML = "JavaScript Exercises";
+        document.getElementById("ex1").innerHTML = "Exercise 1";
+        var img1 = document.getElementById("img1");
+        img1.src = "grape.jpg";
+        img1.width = "300";
+        
+        //Ex 2
+        document.write("The name of the anchor is \"" + document.getElementsByTagName("a")[0].name + "\"<br>");
+        var id2 = document.getElementById("ex2");
+        id2.style.color = "blue";
+        id2.style.fontStyle = "italic";
+    </script>
+</body>
+</html>

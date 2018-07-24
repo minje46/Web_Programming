@@ -1,0 +1,128 @@
+<html> <head>
+<!-- 시계
+<script>
+var numbers;
+function startTime()
+{
+var today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+// add a zero in front of numbers < 10
+m = checkTime(m);
+s = checkTime(s);
+var date = (new Date()).toString().substr(0,10);                       
+document.getElementById('txt').innerHTML = date + " ";
+document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i < 10)
+{
+i = "0" + i;
+}
+return i;
+}
+</script>
+-->
+
+<!-- 시계 + 날짜
+	<script>
+function startTime()
+		{
+			var today=new Date();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+                        
+                        var date = (new Date()).toString().substr(0,10);                       
+                        document.getElementById('txt').innerHTML= date + " ";
+			document.getElementById('txt').innerHTML+=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+		function checkTime(i)
+		{
+			if (i<10)
+			  {
+			  i="0" + i;
+			  }
+			return i;
+		}
+</script>
+-->
+
+<!-- 쿠키
+<title> Widgets "R" Us</title>
+<script>
+function storeCookies()
+{
+var expires = "; expires = Monday, 01-Dec-02 23:59:59 GMT";
+var first = document.widgetForm.firstField.value;
+var last = document.widgetForm.lastField.value;
+var account = document.widgetForm.accountField.value;
+document.cookie = "first = " + first + expires;
+document.cookie = "last = " + last + expires;
+document.cookie = "account = " + account + expires;
+}
+function registerAccount()
+{
+storeCookies();
+alert("Registration Successful.");
+}
+function cookieVal(cookieName, cookieString)
+{
+var startLoc = cookieString.indexOf(cookieName);
+if(startLoc == -1)
+{
+return(" ");
+}
+var sepLoc = cookieString.indexOf(" = ", startLoc);
+var endLoc = cookieString.indexOf(" ; ", startLoc);
+if(endLoc == -1)
+{
+endLoc = cookieString.length;
+}
+return(cookieString.substring(sepLoc+1, endLoc));
+}
+function presetValues()
+{
+var firstField = document.widgetForm.firstField;
+var lastField = document.widgetForm.lastField;
+var accountField = document.widgetForm.accountField;
+var cookies = document.cookie;
+firstField.value = cookieVal("first", cookies);
+lastField.value = cookieVal("last", cookies);
+accountField.value = cookieVal("account", cookies);
+}
+</script>
+-->
+
+</head>
+<!-- 시계 + 날짜>
+<body onload="startTime()">
+<div id="txt"></div>
+-->
+
+<!-- 쿠키
+<body onLoad = "presetValues()">
+<h1> Widgets "R" Us</h1>
+<form action = "servlet / cwp.Widgets" name = "widgetForm">
+First Name : <input type = "text" name = "firstField">
+<br>
+Last Name : <input type = "txt" name = "lastField">
+<br>
+Account Number : <input type = "text" name = "accountField">
+<br>
+Widget Name : <input type = "text" name = "widgetField">
+<br>
+<input type = "button" value = "Register Account" onClick = "registerAccount()">
+<input type = "submit" value = "Submit Order">
+</form>
+-->
+
+
+</body>
+</html>

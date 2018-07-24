@@ -1,0 +1,66 @@
+<html>
+<head>
+	<script type="text/javascript">
+		// Ex 13
+		function timedMsg()	{
+			var t=setTimeout("alert('I am displayed after 3 seconds!')",3000);
+		}
+
+		// Ex 14
+		function timedText() {
+
+			var t1=setTimeout("document.getElementById('txt1').value='2 seconds!'",2000);
+			var t2=setTimeout("document.getElementById('txt1').value='4 seconds!'",4000);
+			var t3=setTimeout("document.getElementById('txt1').value='6 seconds!'",6000);
+
+//			var t3=setTimeout("document.form.form1.txt1.value='6 seconds!'",6000);
+
+		}
+
+		// Ex 15-16
+		var c=0;
+		var t;
+		var timer_is_on=0;
+		
+		function timedCount() {
+			document.getElementById('txt2').value=c;
+			c=c+1;
+			t=setTimeout("timedCount()",1000);
+		}
+		
+		function doTimer() {
+			if (!timer_is_on)
+			  {
+			  timer_is_on=1;
+			  timedCount();
+			  }
+		}
+		
+		function stopCount() {
+			clearTimeout(t);
+			timer_is_on=0;
+		}
+	</script>
+</head>
+
+<body>
+
+	<form>
+		<input type="button" value="Display alert box!" onClick="timedMsg()">
+	</form>
+
+	<form name="form1">
+		<input type="button" value="Display timed text!" onclick="timedText()">
+		<input type="text" id="txt1" name="txt1">
+	</form>
+	<p>Click on the button above. The input field will tell you when two, four, and six seconds have passed.</p>
+
+	<form>
+		<input type="button" value="Start count!" onclick="doTimer()">
+		<input type="text" id="txt2">
+		<input type="button" value="Stop count!" onclick="stopCount()">
+	</form>
+	<p>Click on the "Start count!" button above to start the timer. The input field will count forever, starting at 0. Click on the "Stop count!" button to stop the counting. Click on the "Start count!" button to start the timer again.</p>
+</body>
+</html>
+

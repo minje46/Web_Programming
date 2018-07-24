@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>JavaScript P5 Ex6</title>
+</head>
+
+<body>
+    <h1>Exercise 6</h1>
+    <a href="http://google.com" name="google"> Google Link</a><br>
+    <a href="http://naver.com" name="naver"> Naver Link </a><br>
+    <a href="http://daum.net"> Daum Link without anchor</a><br><br><br>
+    
+    <script>
+        //Ex 6
+        var x = document.links;
+        var y = document.anchors;
+        document.write("Number of links: " + x.length + "<br>");
+        document.write("Number of anchors: " + y.length + "<br>");
+        document.write("innerHTML, name of first anchor: " + y[0].innerHTML + "," + y[0].name + "<br>");
+        document.write("innerHTML of third link: " + x[2].innerHTML + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html> 
+<head> 
+	<title> JavaScript P5 Ex 12 </title> 
+	<script type="text/javascript"> 
+		//Ex 12
+		function startTime()
+		{
+			var today=new Date();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			// add a zero in front of numbers<10
+			m=checkTime(m);
+			s=checkTime(s);
+                        
+                        var date = (new Date()).toString().substr(0,10);                       
+                        document.getElementById('txt').innerHTML= date + " ";
+			document.getElementById('txt').innerHTML+=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+		function checkTime(i)
+		{
+			if (i<10)
+			  {
+			  i="0" + i;
+			  }
+			return i;
+		}
+
+	</script>
+</head> 
+<body onload="startTime()">
+	<div id="txt"></div>
+</body>
+</html> 

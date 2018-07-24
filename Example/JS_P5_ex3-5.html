@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>JavaScript P5 Ex3 - Ex5</title>
+    <script>
+        // Ex3
+        function mDown(obj) {obj.src = "grape.jpg";}
+        function mUp(obj) {obj.src = "apple.jpg";}
+        // Ex4
+        function mOver(obj) {obj.innerHTML = "Exercise 4"; obj.style.color="blue"; obj.style.fontStyle="italic";}
+        function mOut(obj) {obj.innerHTML = "Exercise 2"; obj.style.color="black"; obj.style.fontStyle="normal";}
+        // Ex5
+        function popup(str1) { alert(str1); }
+    </script>
+</head>
+
+<body>
+    <h1>JS EX</h1>
+    <h3 id="ex1">EX1</h3>
+    <img id="img1" src="apple.jpg" width="400" onMouseDown="mDown(this)" onMouseUp="mUp(this)">
+    <p>The elements above were changed by JavaScript.</p>
+    <br><br><br><br><br><br>¡¦
+
+    <h3 id="ex2">Exercise 2</h3>
+    <a href="#ex1" name="ex2link">Go to exercise 1</a><br>
+    <form><input type="button" value="popup" onClick="popup('Good Job!')"></form><br>
+    
+    <script>
+        var h1 = document.getElementsByTagName("h1");
+        h1[0].innerHTML = "JavaScript Exercises";
+        document.getElementById("ex1").innerHTML = "Exercise 1";
+
+        var id2 = document.getElementById("ex2");
+        id2.onmouseover = function() { mOver(id2); };
+        id2.onmouseout = function() { mOut(id2); };
+        document.write("The name of the anchor is \"" + document.getElementsByTagName("a")[0].name + "\"<br>");
+    </script>
+</body>
+</html>

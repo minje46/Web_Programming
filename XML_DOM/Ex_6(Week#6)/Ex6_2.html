@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function loadXMLDoc(filename){
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+        
+        function Search(node, name){
+            var child = node.firstChild;
+            var children = [];
+            while(child != null){
+                if(child.nodeType==1 && child.nodeName==name)
+                    children[children.length] = child;
+                child = child.nextSibling;
+            }
+            return children;
+        }
+    </script>
+    
+    <script>
+        var xmlDoc=loadXMLDoc("books.xml");
+        var books=xmlDoc.getElementsByTagName("book");
+        
+        document.write("<p>==========================Ex6_2(1)===============================" +"</p>");
+        for (index=0; index<books.length; index++) {
+            document.write("<p>" +"In " +index +"'s book" +"</p>");
+            document.write("<table border=1 cellpadding=2>\n")
+            var attr = ["title", "author", "year"];
+            for (i=0; i<attr.length; i++) {
+                var x = Search(books[index], attr[i]);
+                for (j=0; j<x.length; j++) {
+                    document.write("<tr><td>" +attr[i] +"</td><td>");
+                    document.write(x[j].firstChild.nodeValue +"</td></tr>\n");
+                }
+            }
+            document.write("</table>\n");
+        }
+    </script>
+    
+    <script>
+	    var xmlDoc=loadXMLDoc("cd_catalog.xml");
+	    var cds=xmlDoc.getElementsByTagName("CD");
+	    
+        document.write("<br><br>" +"<p>==========================Ex6_2(2)===============================" +"</p>");
+	    for (index=0; index<cds.length; index++) {
+	        var x = Search(cds[index],"YEAR");
+	        var year = x[0].firstChild.nodeValue;
+	        if (year < 1990) 
+	        	continue;
+	        
+            document.write("<p>" +"In " +index +"'s CD" +"</p>");
+	        document.write("<table border=1 cellpadding=2>\n")
+	        var attr = ["TITLE", "ARTIST", "YEAR"];
+	        for (i=0; i<attr.length; i++) {
+	            var x = Search(cds[index], attr[i]);
+
+	            for (j=0; j<x.length; j++) {
+	                document.write("<tr><td>" +attr[i] +"</td><td>");
+	                document.write(x[j].firstChild.nodeValue +"</td></tr>\n");
+	            }
+	        }
+	        document.write("</table>\n");
+	    }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

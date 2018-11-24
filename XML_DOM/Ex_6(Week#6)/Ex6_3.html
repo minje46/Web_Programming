@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function loadXMLDoc(filename){
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+        
+        function Search(node, name){
+            var child = node.firstChild;
+            var children = [];
+            while(child != null){
+                if(child.nodeType==1 && child.nodeName==name)
+                    children[children.length] = child;
+                child = child.nextSibling;
+            }
+            return children;
+        }
+    </script>
+    
+    <script>
+        var xmlDoc=loadXMLDoc("books.xml");
+        var books=xmlDoc.getElementsByTagName("book");
+        
+        var newBook = new Array();
+		var newTitle = new Array();
+		var newText = new Array(3);
+		var newAuthor = new Array();
+		var newYear = new Array();
+		
+		for(var i = 0; i < 3; i++) newText[i] = new Array();	//2D array for newText
+
+		// book1
+		newBook[0] = xmlDoc.createElement("book");
+		newTitle[0] = xmlDoc.createElement("title");
+		newText[0][0] = xmlDoc.createTextNode("Advanced_Web programming");
+		newAuthor[0] = xmlDoc.createElement("author");
+		newText[0][1] = xmlDoc.createTextNode("Lee sang woong");
+		newYear[0] = xmlDoc.createElement("year");
+		newText[0][2] = xmlDoc.createTextNode("2018");
+		newBook[0].setAttribute("category", "default");
+    
+		newTitle[0].appendChild(newText[0][0]);
+		newAuthor[0].appendChild(newText[0][1]);
+		newYear[0].appendChild(newText[0][2]);
+		newBook[0].appendChild(newTitle[0]);
+		newBook[0].appendChild(newAuthor[0]);
+		newBook[0].appendChild(newYear[0]);
+
+		
+        // book2
+		newBook[1] = xmlDoc.createElement("book");
+		newTitle[1] = xmlDoc.createElement("title");
+		newText[1][0] = xmlDoc.createTextNode("Distributed system");
+		newAuthor[1] = xmlDoc.createElement("author");
+		newText[1][1] = xmlDoc.createTextNode("Hwang hyoseok");
+		newYear[1] = xmlDoc.createElement("year");
+		newText[1][2] = xmlDoc.createTextNode("2016");
+		newBook[1].setAttribute("category", "default");
+		
+		newTitle[1].appendChild(newText[1][0]);
+		newAuthor[1].appendChild(newText[1][1]);
+		newYear[1].appendChild(newText[1][2]);
+		newBook[1].appendChild(newTitle[1]);
+		newBook[1].appendChild(newAuthor[1]);
+		newBook[1].appendChild(newYear[1]);
+
+		// book3 
+		newBook[2] = xmlDoc.createElement("book");
+		newTitle[2] = xmlDoc.createElement("title");
+		newText[2][0] = xmlDoc.createTextNode("What's News");
+		newAuthor[2] = xmlDoc.createElement("author");
+		newText[2][1] = xmlDoc.createTextNode("Kwak minje");
+		newYear[2] = xmlDoc.createElement("year");
+		newText[2][2] = xmlDoc.createTextNode("1994");
+		newBook[2].setAttribute("category", "default");
+
+		newTitle[2].appendChild(newText[2][0]);
+		newAuthor[2].appendChild(newText[2][1]);
+		newYear[2].appendChild(newText[2][2]);
+		newBook[2].appendChild(newTitle[2]);
+		newBook[2].appendChild(newAuthor[2]);
+		newBook[2].appendChild(newYear[2]);
+
+		/*
+		append elements to the root node (bookstore)
+		*/
+		for(var i = 0 ; i < 3; i++)
+			xmlDoc.childNodes[0].appendChild(newBook[i]);
+	 
+        document.write("<p>==========================Ex6_3(1)===============================" +"</p>");		
+        for (index=0; index<books.length; index++) {
+            document.write("<p>" +"In " +index +"'s book" +"</p>");
+            document.write("<table border=1 cellpadding=2>\n")
+            var attr = ["title", "author", "year"];
+            for (i=0; i<attr.length; i++) {
+                var x = Search(books[index], attr[i]);
+                for (j=0; j<x.length; j++) {
+                    document.write("<tr><td>" +attr[i] +"</td><td>");
+                    document.write(x[j].firstChild.nodeValue +"</td></tr>\n");
+                }
+            }
+            document.write("</table>\n");
+        }
+    </script>
+    
+    <script>
+        var xmlDoc=loadXMLDoc("cd_catalog.xml");
+	    var cds=xmlDoc.getElementsByTagName("CD");
+	
+        document.write("<br><br>" +"<p>==========================Ex6_3(2)===============================" +"</p>");
+	    for (index=0; index<cds.length; index++) {
+	        var x = Search(cds[index],"YEAR");
+	        var year = x[0].firstChild.nodeValue;
+	        if (year >= 1995) 
+	        	continue;
+	        
+            document.write("<p>" +"In " +index +"'s CD" +"</p>");
+	        document.write("<table border=1 cellpadding=2>\n")
+	        var attr = ["TITLE", "ARTIST", "PRICE", "YEAR"];
+	        for (i=0; i<attr.length; i++) {
+	            var x = Search(cds[index], attr[i]);
+
+	            for (j=0; j<x.length; j++) {
+	                document.write("<tr><td>" +attr[i] +"</td><td>");
+                    if(attr[i]=="PRICE")
+                        x[j].firstChild.nodeValue = x[j].firstChild.nodeValue * 0.9; 
+	                document.write(x[j].firstChild.nodeValue +"</td></tr>\n");
+	            }
+	        }
+	        document.write("</table>\n");
+	    }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

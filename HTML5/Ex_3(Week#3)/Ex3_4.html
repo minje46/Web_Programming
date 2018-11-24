@@ -1,0 +1,26 @@
+<script>
+function clickCounter() {
+    if (typeof(Storage) !== "undefined") {
+        // Code for sessionStorage/sessionStorage
+        if (sessionStorage.clickcount) {
+            // name/value pairs are always stored as strings
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+        } else {
+            // create a sessionStorage name/value pair
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = 
+            "You have clicked the button " + sessionStorage.clickcount + 
+            " time(s).";
+    } else {
+    	// Sorry, no web storage support
+        document.getElementById("result").innerHTML = 
+            "Sorry, your browser does not support web storage ...";
+    }
+}
+</script>
+<p><button type="button" onclick="clickCounter()">Counter</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, 
+and the counter will continue to count (is not reset).</p>

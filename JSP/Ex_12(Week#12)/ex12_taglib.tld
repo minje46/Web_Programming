@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <tlib-version>1.0</tlib-version>
+  <short-name>ex12_taglib</short-name>
+  <!-- coding -->
+  <tag>
+    <description>Print random number between 0 and 1</description>
+    <name>random</name>
+    <tag-class>ex12.Random</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  
+  <tag>
+  	 <description>Print random number with limit</description>
+    <name>randomInt</name>
+    <tag-class>ex12.Random_Int</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+    	<name>limit</name>
+    	<required>true</required>
+    </attribute>
+  </tag>
+</taglib>
+ 

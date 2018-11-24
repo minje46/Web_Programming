@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newspaper 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="newspaper.xsd"
+NAME="Vervet Logic Times" 
+PUBLISHER = "Vervet Logic Press"
+COPYRIGHT = "Copyright 1998 Vervet Logic Press">
+	<article author="KWAK" editor="Mr.kim" date="Sept 13 2018"
+		edition="3.0">
+		<headline>'Disaster Is At The Doorstep,' N.C. Governor Says As Hurricane Florence Zeroes In</headline>
+		<byline>https://www.npr.org</byline>
+		<lead>hurricane-florence-zeroes-in-on-carolinas-bringing-130-mph-winds
+        </lead>
+		<body>Hurricane Florence has weakened slightly to Category 2 even as it blasts toward the Carolinas, carrying sustained winds of 110 mph and the likelihood of "life-threatening storm surge and rainfall," the National Hurricane Center says. 
+		</body>
+		<notes>This article is published.</notes>
+	</article>
+</newspaper>

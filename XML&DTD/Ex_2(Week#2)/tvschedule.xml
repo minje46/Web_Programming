@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tvschedule name="Schedule"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="tvschedule.xsd">
+<channel chn="mbc">
+    <banner>MBC</banner>
+    <day>
+        <date>09/13/2018</date>
+        <holiday>Thursday</holiday>
+    </day>
+    <day>
+        <date>09/11/2018</date>
+        <programslot>
+            <time>8PM</time>
+            <title>Soccer</title>
+            <description>Korea vs. Chile</description>
+        </programslot>
+    </day>
+</channel>
+</tvschedule>

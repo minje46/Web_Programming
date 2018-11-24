@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="newspaper" type="newstype"/>
+    <xs:complexType name="newstype">
+        <xs:sequence>
+            <xs:element name="article" type="atctype" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="NAME" type="xs:string" />
+        <xs:attribute name="PUBLISHER" type="xs:string" />
+        <xs:attribute name="COPYRIGHT" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="atctype">
+        <xs:sequence>
+            <xs:element name="headline" type="xs:string" />
+            <xs:element name="byline" type="xs:string" />
+            <xs:element name="lead" type="xs:string" />
+            <xs:element name="body" type="xs:string" />
+            <xs:element name="notes" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="author" type="xs:string" />
+        <xs:attribute name="editor" type="xs:string" /> 
+        <xs:attribute name="date" type="xs:string" />    
+        <xs:attribute name="edition" type="xs:string"/>    
+    </xs:complexType>
+</xs:schema> 

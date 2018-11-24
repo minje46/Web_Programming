@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BOARD SYSTEM "bulletin.dtd">
+
+<BOARD>
+    <NAME>STUDY WEB</NAME>
+    <ARTICLE>
+        <TITLE>EXERCISE_1</TITLE>
+        <W_MSG>It is "so difficult" to do this easy task for me</W_MSG>
+        <W_ID>201333450</W_ID>
+        <W_NAME>kwak</W_NAME>
+        <REPLY>
+            <R_MSG>Cheer up!</R_MSG>
+            <W_ID>201333470</W_ID>
+            <W_NAME>An</W_NAME>
+        </REPLY>
+    </ARTICLE>
+</BOARD>

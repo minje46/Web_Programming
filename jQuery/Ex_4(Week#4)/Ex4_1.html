@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+    <script>
+    $(document).ready(function(){
+        $("p").mouseenter(function(){
+            $("h1").text("Your choice : ").append($(this).text().substr(4));
+        });
+        
+        $("p").mouseleave(function(){
+           $("h1").text("Which is the web browser you prefer?") 
+        });
+    });
+    </script>
+</head>
+    
+<body>
+    <h1>Which is the web browser you prefer?</h1>
+    <p>(a) Chrome</p>
+    <p>(b) Internet Explorer</p>
+    <p>(c) Safari</p>
+    
+</body>
+</html>

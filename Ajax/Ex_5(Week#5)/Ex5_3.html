@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Search(arr){
+			var category = document.getElementById("category");
+			var option = category.options[category.selectedIndex].value;
+            var table = document.getElementById("table");
+            
+            if(option == "title"){
+                var list = "<th>TILTE</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].TITLE + "</td></tr>";
+            }
+            else if(option == "artist"){
+                var list = "<th>ARTIST</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].ARTIST + "</td></tr>";
+            }
+            else if(option == "country"){
+                var list = "<th>COUNTRY</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].COUNTRY + "</td></tr>";
+            }
+            else if(option == "company"){
+                var list = "<th>COMPANY</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].COMPANY + "</td></tr>";
+            }
+            else if(option == "price"){
+                var list = "<th>PRICE</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].PRICE + "</td></tr>";
+            }
+            else if(option == "year"){
+                var list = "<th>YEAR</th>";
+                for(var i=0; i<arr.CATALOG.CD.length; i++)
+                    list += "<tr><td>" + arr.CATALOG.CD[i].YEAR + "</td></tr>";
+            }
+            table.innerHTML = list;
+        }
+        
+        function loadXMLDoc(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                    var arr = JSON.parse(xmlhttp.responseText);
+                    Search(arr);
+                }
+            }
+            xmlhttp.open("GET", "cd_catalog.json", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Select a Field to Show : </h2>   
+    <select id="category">
+        <option value="title">TITLE</option>
+        <option value="artist">ARTIST</option>
+        <option value="country">COUNTRY</option>
+        <option value="company">COMPANY</option>
+        <option value="price">PRICE</option>
+        <option value="year">YEAR</option>
+    </select>
+    <button id="button" onclick="loadXMLDoc()">Show Values</button>
+    <table id="table" border="1" cellpadding="3"></table>
+</body>
+</html>

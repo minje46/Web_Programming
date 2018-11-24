@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="EUC-KR">
+    <title>AJAX example using xml on Tomcat server</title>
+    <script>               
+	    function Search(arr, name){
+	    	var category = ["TITLE", "ARTIST", "COUNTRY", "COMPANY", "PRICE", "YEAR"];
+	        for(var i=0; i<arr.length; i++){
+	        	var info = [];
+	            for(var j=0; j<arr[i].childNodes.length; j++){
+	            	if(arr[i].childNodes[j].nodeType == Node.ELEMENT_NODE){
+	            		info.push(arr[i].childNodes[j].childNodes[0].nodeValue);
+	            		}
+	            	}
+	                
+	            if(info[1] == name){
+	            	var html = '<p><table border="1" cellpadding="3">\n';
+				    for (var j = 0; j < info.length; j ++)
+				    	html = html + '<tr><th>' + category[j] + '</th><td>' + info[j] + '</td></tr>\n';
+	                html = html + '</table>\n';
+	                document.getElementById("span1").innerHTML = html;
+	                return;                
+	                }
+	            }
+	        document.getElementById("span1").innerHTML = "none";
+	    }
+
+        function loadXMLDoc(){
+            var xmlhttp = new XMLHttpRequest();
+            var name = document.getElementById("input").value;
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    var xmlDoc = xmlhttp.responseXML;
+                    var arr = xmlDoc.getElementsByTagName("CD");
+                    Search(arr, name);
+                }
+            }
+            xmlhttp.open("GET", "cd_catalog.xml", true);
+            xmlhttp.send();            
+        }
+    </script>
+</head>
+    
+<body>
+    <h2>Enter Artist Name : </h2>
+    <input id="input" type="text" />
+    <button type="button" onclick=" loadXMLDoc()">Search</button>
+    <p><div id="div1">CD Information: <span id="span1"></span></div>
+</body>
+</html>

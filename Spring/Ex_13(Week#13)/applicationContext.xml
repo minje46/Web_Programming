@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Ex13_1
+<bean id="shape1" class="ex13.Rectangle">
+<property name="length" value="10"/>
+<property name="width" value="20"/>
+</bean>
+
+<bean id="shape2" class="ex13.Circle">
+<constructor-arg value="10"/>
+</bean>
+-->
+
+<!-- Ex13_2 -->
+<bean id="car1" class="ex13.CarFactory" factory-method="makeCar">
+	<constructor-arg value="SM5"/>
+	<constructor-arg value = "2011"/>
+	<constructor-arg value = "Leno"/>
+</bean>
+
+<bean id="car2" class="ex13.CarFactory" factory-method="makeCar">
+	<constructor-arg value = "Genesis"/>
+	<constructor-arg value = "2013"/>
+</bean>
+</beans>
